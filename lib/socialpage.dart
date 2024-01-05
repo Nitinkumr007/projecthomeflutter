@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:projecthomeflutter/socialmedia/facebook.dart';
+import 'package:projecthomeflutter/socialmedia/instagram.dart';
+import 'package:projecthomeflutter/socialmedia/twitter.dart';
+
 
 
 
@@ -58,8 +61,16 @@ class _socialpageState extends State<socialpage> {
               child: Text('move to facebook'),)),
 
 
-            Center(child: Text("Instagram")),
-            Center(child: Text("Twitter")),
+            Center(child: TextButton( onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> Instagram()));
+
+            },
+              child: Text('move to instagram'),)),
+            Center(child: TextButton( onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> const Twitter()));
+
+            },
+              child: Text('move to twitter'),)),
           ],
         ),
       ),

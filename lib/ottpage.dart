@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:projecthomeflutter/ott/netflix.dart';
+import 'package:projecthomeflutter/ott/prime.dart';
+import 'package:projecthomeflutter/ott/youtube.dart';
 
 class ottpage extends StatefulWidget {
   const ottpage({Key? key});
@@ -48,9 +51,21 @@ class _ottpageState extends State<ottpage> {
         ),
         body: TabBarView(
           children: [
-            Center(child: Text("Netflix")),
-            Center(child: Text("Prime")),
-            Center(child: Text("YouTube")),
+        Center(child: TextButton( onPressed: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context)=> const Netflix()));
+
+      },
+        child: Text('move to netflix'),)),
+            Center(child: TextButton( onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> const Prime_video()));
+
+            },
+              child: Text('move to prime'),)),
+            Center(child: TextButton( onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> const Youtube()));
+
+            },
+              child: Text('move to youtube'),)),
           ],
         ),
       ),
